@@ -45,7 +45,7 @@ public class CaptureImage : MonoBehaviour
                 break;
         }
 
-        // Graphics.Blit(inverted, destination);
+        // Graphics.Blit(source, destination);
     }
 
 }
