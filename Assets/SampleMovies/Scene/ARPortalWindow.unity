@@ -647,5 +647,10 @@ PrefabInstance:
       propertyPath: m_Name
       value: ARWorld
       objectReference: {fileID: 0}
+    - target: {fileID: 8285393946642001182, guid: 8350fe5538af0439fa9f096be7726d9d,
+        type: 3}
+      propertyPath: m_IsActive
+      value: 0
+      objectReference: {fileID: 0}
     m_RemovedComponents: []
   m_SourcePrefab: {fileID: 100100000, guid: 8350fe5538af0439fa9f096be7726d9d, type: 3}
