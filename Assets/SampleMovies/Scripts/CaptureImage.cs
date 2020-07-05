@@ -13,6 +13,7 @@ public class CaptureImage : MonoBehaviour
 {
 
     [SerializeField] protected RenderTexture image;
+    [SerializeField] protected RenderTexture inverted;
 
     [SerializeField] protected WorldMode mode = WorldMode.Default;
     // images
@@ -38,7 +39,7 @@ public class CaptureImage : MonoBehaviour
                 Graphics.Blit(source, destination); // default 
                 break;
             case WorldMode.Inverted:
-                // Graphics.Blit(inverted, destination);
+                Graphics.Blit(inverted, destination);
                 break;
             default:
                 Graphics.Blit(source, destination); // default 
@@ -46,6 +47,17 @@ public class CaptureImage : MonoBehaviour
         }
 
         // Graphics.Blit(source, destination);
+    }
+
+    protected void OnTriggerEnter(Collider other)
+    {
+        string name = other.gameObject.name;
+
+        if(name == "Plane_inverted")
+        {
+            Debug.Log("Hit Plane_inverted");
+            mode = WorldMode.Inverted;
+        }
     }
 
 }
