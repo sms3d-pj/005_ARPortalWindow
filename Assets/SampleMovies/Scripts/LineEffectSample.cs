@@ -2,23 +2,24 @@
 using System.Collections.Generic;
 using UnityEngine;
 
-public class InvertEffectSample : MonoBehaviour
+public class LineEffectSample : MonoBehaviour
 {
-
     [SerializeField] protected RenderTexture realWorldImage, effectedWorldImage;
-    [SerializeField] protected Material material_inverted;
+    [SerializeField] protected Material material_line;
 
+    // Start is called before the first frame update
     void Start()
     {
+        
     }
 
+    // Update is called once per frame
     void Update()
     {
         Graphics.Blit(
             realWorldImage,  // _MainTex
-            effectedWorldImage, 
-            material_inverted
+            effectedWorldImage,
+            material_line
         );
     }
-
 }
