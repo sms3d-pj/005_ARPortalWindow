@@ -6,6 +6,7 @@ public enum WorldMode
 {
     Default,
     Inverted,
+    Line,
     Stitched,
 };
 
@@ -14,6 +15,7 @@ public class CaptureImage : MonoBehaviour
 
     [SerializeField] protected RenderTexture image;
     [SerializeField] protected RenderTexture inverted;
+    [SerializeField] protected RenderTexture line;
 
     [SerializeField] protected WorldMode mode = WorldMode.Default;
     // images
@@ -41,6 +43,9 @@ public class CaptureImage : MonoBehaviour
             case WorldMode.Inverted:
                 Graphics.Blit(inverted, destination);
                 break;
+            case WorldMode.Line:
+                Graphics.Blit(line, destination);
+                break;
             default:
                 Graphics.Blit(source, destination); // default 
                 break;
@@ -53,10 +58,19 @@ public class CaptureImage : MonoBehaviour
     {
         string name = other.gameObject.name;
 
-        if(name == "Plane_inverted")
+        switch(name)
         {
-            Debug.Log("Hit Plane_inverted");
-            mode = WorldMode.Inverted;
+            case "Plane_inverted":
+                Debug.Log("Hit Plane_inverted");
+                mode = WorldMode.Inverted;
+                break;
+            case "Plane_line":
+                Debug.Log("Hit Plane_line");
+                mode = WorldMode.Line;
+                break;
+            default:
+                mode = WorldMode.Default;
+                break;
         }
     }
 
