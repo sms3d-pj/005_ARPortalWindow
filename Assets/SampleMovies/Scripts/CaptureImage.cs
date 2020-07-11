@@ -7,7 +7,7 @@ public enum WorldMode
     Default,
     Inverted,
     Line,
-    Stitched,
+    VHS,
 };
 
 public class CaptureImage : MonoBehaviour
@@ -16,6 +16,7 @@ public class CaptureImage : MonoBehaviour
     [SerializeField] protected RenderTexture image;
     [SerializeField] protected RenderTexture inverted;
     [SerializeField] protected RenderTexture line;
+    [SerializeField] protected RenderTexture VHS;
 
     [SerializeField] protected WorldMode mode = WorldMode.Default;
     // images
@@ -32,9 +33,6 @@ public class CaptureImage : MonoBehaviour
     {
         Graphics.Blit(source, image);
 
-        // Graphics.Blit(source, inverted, invert);
-        // Graphics.Blit(source, stitched, stich);
-
         switch(mode)
         {
             case WorldMode.Default:
@@ -46,12 +44,13 @@ public class CaptureImage : MonoBehaviour
             case WorldMode.Line:
                 Graphics.Blit(line, destination);
                 break;
+            case WorldMode.VHS:
+                Graphics.Blit(VHS, destination);
+                break;
             default:
                 Graphics.Blit(source, destination); // default 
                 break;
         }
-
-        // Graphics.Blit(source, destination);
     }
 
     protected void OnTriggerEnter(Collider other)
@@ -68,10 +67,13 @@ public class CaptureImage : MonoBehaviour
                 Debug.Log("Hit Plane_line");
                 mode = WorldMode.Line;
                 break;
+            case "Plane_VHS":
+                Debug.Log("Hit Plane_VHS");
+                mode = WorldMode.VHS;
+                break;
             default:
                 mode = WorldMode.Default;
                 break;
         }
     }
-
 }
