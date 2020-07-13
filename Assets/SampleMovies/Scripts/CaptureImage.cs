@@ -8,6 +8,7 @@ public enum WorldMode
     Inverted,
     Line,
     VHS,
+    Dot
 };
 
 public class CaptureImage : MonoBehaviour
@@ -17,6 +18,7 @@ public class CaptureImage : MonoBehaviour
     [SerializeField] protected RenderTexture inverted;
     [SerializeField] protected RenderTexture line;
     [SerializeField] protected RenderTexture VHS;
+    [SerializeField] protected RenderTexture dot;
 
     [SerializeField] protected WorldMode mode = WorldMode.Default;
     // images
@@ -47,6 +49,9 @@ public class CaptureImage : MonoBehaviour
             case WorldMode.VHS:
                 Graphics.Blit(VHS, destination);
                 break;
+            case WorldMode.Dot:
+                Graphics.Blit(dot, destination);
+                break;
             default:
                 Graphics.Blit(source, destination); // default 
                 break;
@@ -70,6 +75,10 @@ public class CaptureImage : MonoBehaviour
             case "Plane_VHS":
                 Debug.Log("Hit Plane_VHS");
                 mode = WorldMode.VHS;
+                break;
+            case "Plane_dot":
+                Debug.Log("Hit Plane_dot");
+                mode = WorldMode.Dot;
                 break;
             default:
                 mode = WorldMode.Default;
