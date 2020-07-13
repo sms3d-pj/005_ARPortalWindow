@@ -1,22 +1,22 @@
 ﻿Shader "Sample/Dot" {
-Properties {
-	_MainTex ("Base (RGB)", 2D) = "white" {}
+	Properties {
+		_MainTex ("Base (RGB)", 2D) = "white" {}
 		
-	tSize ("tSize (vec2)", Vector) = ( 256, 256, 0, 0 )
-	center ("center (vec2)", Vector) = ( 0.5, 0.5, 0, 0 )
-	angle ("angle", Float) = 1.57
-	scale ("scale", Float) = 1.0
-}
+		tSize ("tSize (vec2)", Vector) = ( 256, 256, 0, 0 )
+		center ("center (vec2)", Vector) = ( 0.5, 0.5, 0, 0 )
+		angle ("angle", Float) = 1.57
+		scale ("scale", Float) = 1.0
+	}
 	
 	SubShader {
 
 		Pass
-	    {            
-	        CGPROGRAM
-            #pragma vertex vert_img
-            #pragma fragment frag
+		{            
+			CGPROGRAM
+			#pragma vertex vert_img
+			#pragma fragment frag
 
-            #include "UnityCG.cginc"
+			#include "UnityCG.cginc"
 
 			uniform sampler2D _MainTex;
 			
@@ -38,13 +38,18 @@ Properties {
 			float4 frag(v2f_img i) : COLOR {
 				half2 vUv = i.uv;
 				
+				//fixed4 color = fixed4(vUv.x, vUv.y, 0, 1);
+				
+
 				float4 col = tex2D( _MainTex, vUv );
-				float average = ( col.r + col.g + col.b ) / 3.0;
-				float newColor = average * 10.0 - 5.0 + pattern(i);
-				float4 fragColor = float4( newColor, newColor, newColor, col.a );
-				return fragColor;
+				//float average = ( col.r + col.g + col.b ) / 3.0;
+				//float newColor = average * 10.0 - 5.0 + pattern(i);
+				//float4 fragColor = float4( newColor, newColor, newColor, col.a );
+				//return fragColor;
+
+				return col;
 			}                         
-	        ENDCG        
-	    }
+			ENDCG        
+		}
 	}
 }
