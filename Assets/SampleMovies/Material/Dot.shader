@@ -45,12 +45,10 @@
 				
 
 				float4 col = tex2D( _MainTex, vUv );
-				//float average = ( col.r + col.g + col.b ) / 3.0;
-				//float newColor = average * 10.0 - 5.0 + pattern(i);
-				//float4 fragColor = float4( newColor, newColor, newColor, col.a );
-				//return fragColor;
-
-				return col;
+				float average = ( col.r + col.g + col.b ) / 3.0;
+				float newColor = average * 10.0 - 5.0 + pattern(i);
+				float4 fragColor = float4( newColor, newColor, newColor, col.a );
+				return fragColor;
 			}                         
 			ENDCG        
 		}
