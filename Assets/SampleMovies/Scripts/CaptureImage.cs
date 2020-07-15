@@ -1,6 +1,7 @@
 ﻿using System.Collections;
 using System.Collections.Generic;
 using UnityEngine;
+using UnityEngine.XR.ARFoundation;
 
 public enum WorldMode
 {
@@ -13,6 +14,7 @@ public enum WorldMode
 
 public class CaptureImage : MonoBehaviour
 {
+    [SerializeField] protected ARCameraBackground arCamBg;
 
     [SerializeField] protected RenderTexture image;
     [SerializeField] protected RenderTexture inverted;
@@ -33,7 +35,7 @@ public class CaptureImage : MonoBehaviour
 
     protected void OnRenderImage(RenderTexture source, RenderTexture destination)
     {
-        Graphics.Blit(source, image);
+        Graphics.Blit(null, image, arCamBg.material);
 
         switch(mode)
         {
