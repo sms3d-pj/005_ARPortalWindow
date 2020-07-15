@@ -31,11 +31,12 @@ public class CaptureImage : MonoBehaviour
 
     void Update()
     {
+        Graphics.Blit(null, image, arCamBg.material);
     }
 
     protected void OnRenderImage(RenderTexture source, RenderTexture destination)
     {
-        Graphics.Blit(null, image, arCamBg.material);
+        //Graphics.Blit(null, image, arCamBg.material);
 
         switch(mode)
         {
