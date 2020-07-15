@@ -19,4 +19,9 @@ public class DotEffectSample : MonoBehaviour
             material_dot
         );
     }
+
+    protected void OnGUI()
+    {
+        GUI.DrawTexture(new Rect(10, 10, 512, 512), effectedWorldImage);
+    }
 }
