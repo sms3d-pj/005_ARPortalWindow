@@ -20,8 +20,8 @@ public class DotEffectSample : MonoBehaviour
         );
     }
 
-    protected void OnGUI()
-    {
-        GUI.DrawTexture(new Rect(10, 10, 512, 512), effectedWorldImage);
-    }
+    //protected void OnGUI()
+    //{
+    //    GUI.DrawTexture(new Rect(10, 10, 512, 512), effectedWorldImage);
+    //}
 }
