@@ -1,4 +1,4 @@
-﻿Shader "Sample/InvertDisplay"
+﻿Shader "Sample/Display"
 {
     Properties
     {
