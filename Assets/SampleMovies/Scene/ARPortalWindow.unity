@@ -259,7 +259,7 @@ MonoBehaviour:
   arCamBg: {fileID: 484670758}
   image: {fileID: 8400000, guid: e4acec2150423434ca3e9cae26ff3a1a, type: 2}
   inverted: {fileID: 8400000, guid: 993a83d60cfa5554795efc34b153002b, type: 2}
-  line: {fileID: 8400000, guid: d6986894b3556274ab4ab97bb1a1c1e4, type: 2}
+  outline: {fileID: 8400000, guid: f6309030af0f10c4c8d6e71451625e68, type: 2}
   VHS: {fileID: 8400000, guid: d502ae2a11004234c8a8acffebd19364, type: 2}
   dot: {fileID: 8400000, guid: 77cfa3e2762614844a893a790569083f, type: 2}
   film: {fileID: 8400000, guid: a43729af11c5faf44b015c55faad650f, type: 2}
@@ -608,6 +608,26 @@ PrefabInstance:
   m_Modification:
     m_TransformParent: {fileID: 0}
     m_Modifications:
+    - target: {fileID: 5871700584876720761, guid: edf8ccea9df1af848a601bd55d22109a,
+        type: 3}
+      propertyPath: m_LocalPosition.z
+      value: 16.74
+      objectReference: {fileID: 0}
+    - target: {fileID: 5871700585988486094, guid: edf8ccea9df1af848a601bd55d22109a,
+        type: 3}
+      propertyPath: m_LocalPosition.z
+      value: 16.74
+      objectReference: {fileID: 0}
+    - target: {fileID: 7971933425652397858, guid: edf8ccea9df1af848a601bd55d22109a,
+        type: 3}
+      propertyPath: m_Name
+      value: Frame_outline
+      objectReference: {fileID: 0}
+    - target: {fileID: 7971933425652397867, guid: edf8ccea9df1af848a601bd55d22109a,
+        type: 3}
+      propertyPath: m_Name
+      value: Plane_outline
+      objectReference: {fileID: 0}
     - target: {fileID: 7971933425652397870, guid: edf8ccea9df1af848a601bd55d22109a,
         type: 3}
       propertyPath: m_Name
@@ -616,7 +636,7 @@ PrefabInstance:
     - target: {fileID: 7971933425652397870, guid: edf8ccea9df1af848a601bd55d22109a,
         type: 3}
       propertyPath: m_IsActive
-      value: 0
+      value: 1
       objectReference: {fileID: 0}
     - target: {fileID: 7971933425652397875, guid: edf8ccea9df1af848a601bd55d22109a,
         type: 3}
@@ -673,5 +693,25 @@ PrefabInstance:
       propertyPath: m_LocalEulerAnglesHint.z
       value: 0
       objectReference: {fileID: 0}
+    - target: {fileID: 7971933425652397896, guid: edf8ccea9df1af848a601bd55d22109a,
+        type: 3}
+      propertyPath: m_LocalPosition.z
+      value: 0
+      objectReference: {fileID: 0}
+    - target: {fileID: 7971933425652397897, guid: edf8ccea9df1af848a601bd55d22109a,
+        type: 3}
+      propertyPath: m_LocalPosition.z
+      value: 0
+      objectReference: {fileID: 0}
+    - target: {fileID: 7971933425652397971, guid: edf8ccea9df1af848a601bd55d22109a,
+        type: 3}
+      propertyPath: material_line
+      value: 
+      objectReference: {fileID: 2100000, guid: fe4842b1f2ce43a469f18d82ecc009d3, type: 2}
+    - target: {fileID: 7971933425652397971, guid: edf8ccea9df1af848a601bd55d22109a,
+        type: 3}
+      propertyPath: effectedWorldImage
+      value: 
+      objectReference: {fileID: 8400000, guid: f6309030af0f10c4c8d6e71451625e68, type: 2}
     m_RemovedComponents: []
   m_SourcePrefab: {fileID: 100100000, guid: edf8ccea9df1af848a601bd55d22109a, type: 3}
