@@ -135,6 +135,7 @@ GameObject:
   - component: {fileID: 484670759}
   - component: {fileID: 484670758}
   - component: {fileID: 484670762}
+  - component: {fileID: 484670765}
   - component: {fileID: 484670763}
   - component: {fileID: 484670764}
   m_Layer: 0
@@ -252,7 +253,7 @@ MonoBehaviour:
   m_PrefabInstance: {fileID: 0}
   m_PrefabAsset: {fileID: 0}
   m_GameObject: {fileID: 484670756}
-  m_Enabled: 1
+  m_Enabled: 0
   m_EditorHideFlags: 0
   m_Script: {fileID: 11500000, guid: f385bbddffa0cd2489d63a0bf3b126f9, type: 3}
   m_Name: 
@@ -293,6 +294,22 @@ MonoBehaviour:
   m_EditorClassIdentifier: 
   m_HumanSegmentationStencilMode: 3
   m_HumanSegmentationDepthMode: 2
+--- !u!114 &484670765
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 484670756}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 6797fedb547be4f3fb1302b43f36030f, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  arCamBg: {fileID: 484670758}
+  image: {fileID: 8400000, guid: e4acec2150423434ca3e9cae26ff3a1a, type: 2}
+  inverted: {fileID: 8400000, guid: 993a83d60cfa5554795efc34b153002b, type: 2}
+  mode: 0
 --- !u!1 &608515372
 GameObject:
   m_ObjectHideFlags: 0
@@ -455,6 +472,7 @@ GameObject:
   - component: {fileID: 1579886991}
   - component: {fileID: 1579886993}
   - component: {fileID: 1579886992}
+  - component: {fileID: 1579886994}
   m_Layer: 0
   m_Name: World Camera
   m_TagString: Untagged
@@ -527,6 +545,20 @@ Camera:
   m_OcclusionCulling: 1
   m_StereoConvergence: 10
   m_StereoSeparation: 0.022
+--- !u!114 &1579886994
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 1579886990}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: b15f82cc229284894964d2d30806969d, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  m_HumanSegmentationStencilMode: 3
+  m_HumanSegmentationDepthMode: 2
 --- !u!1 &1723835901
 GameObject:
   m_ObjectHideFlags: 0
@@ -685,7 +717,7 @@ PrefabInstance:
     - target: {fileID: 950453903143650401, guid: b50e5a5b29e294aecb3ec761de679835,
         type: 3}
       propertyPath: m_IsActive
-      value: 0
+      value: 1
       objectReference: {fileID: 0}
     m_RemovedComponents: []
   m_SourcePrefab: {fileID: 100100000, guid: b50e5a5b29e294aecb3ec761de679835, type: 3}
