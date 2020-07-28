@@ -59,7 +59,7 @@ public class CaptureImage_OneDoor : MonoBehaviour
                 num++;
                 if(num % 2 == 1)
                 {
-                    
+                    mode = WorldMode_Single.Inverted;
                 }
                 else
                 {
